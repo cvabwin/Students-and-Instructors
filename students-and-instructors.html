@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Students and Instructors</title>
+    <script>
+       var users = {
+        'Students': [ 
+            {first_name:  'Michael', last_name : 'Jordan'},
+            {first_name : 'John', last_name : 'Rosales'},
+            {first_name : 'Mark', last_name : 'Guillen'},
+            {first_name : 'KB', last_name : 'Tonel'}
+         ],
+        'Instructors': [
+            {first_name : 'Michael', last_name : 'Choi'},
+            {first_name : 'Martin', last_name : 'Puryear'}
+         ]
+        };      
+        function listStudentsAndInstructors() {
+            for (var user in users) { 
+                console.log(user);
+                for(var j = 0; j < users[user].length; j++){
+                    numOfChar = users[user][j].first_name.length + users[user][j].last_name.length;
+                    console.log((j+1) + " - " + users[user][j].first_name, users[user][j].last_name + " - " + numOfChar);
+                }
+            } 
+        }  
+        listStudentsAndInstructors();       
+    </script>
+</head>
+<body> 
+</body>
+</html>
